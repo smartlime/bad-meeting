@@ -10,14 +10,14 @@ if [[ ! -d $sdk ]]; then
 fi
 
 export SDKROOT=$sdk
-export CLANG_MODULE_CACHE_PATH=$project_dir/.cache/clang
-export SWIFTPM_MODULECACHE_OVERRIDE=$project_dir/.cache/swift
-mkdir -p "$CLANG_MODULE_CACHE_PATH" "$SWIFTPM_MODULECACHE_OVERRIDE"
+mkdir -p "$project_dir/.cache/clang" "$project_dir/.cache/swift"
+export CLANG_MODULE_CACHE_PATH=$(cd "$project_dir/.cache/clang" && pwd -P)
+export SWIFTPM_MODULECACHE_OVERRIDE=$(cd "$project_dir/.cache/swift" && pwd -P)
 
 cd "$project_dir"
 swift build --disable-sandbox --disable-build-manifest-caching \
   --sdk "$sdk" --scratch-path "$project_dir/.build" \
-  -debug-info-format none -c "$configuration"
+  --jobs 1 -debug-info-format none -c "$configuration"
 bin_dir=$(swift build --disable-sandbox --disable-build-manifest-caching \
   --sdk "$sdk" --scratch-path "$project_dir/.build" \
   -c "$configuration" --show-bin-path)

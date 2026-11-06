@@ -206,6 +206,7 @@ struct NativePreview {
         hosting.cacheDisplay(in: hosting.bounds, to: bitmap)
         guard let png = bitmap.representation(using: .png, properties: [:]) else { fatalError("Could not encode PNG") }
         try png.write(to: url)
+        window.contentView = nil
         window.close()
     }
 }
