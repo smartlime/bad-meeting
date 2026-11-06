@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>ru</string>
+	<key>CFBundleDisplayName</key>
+	<string>Bad Meeting</string>
+	<key>CFBundleExecutable</key>
+	<string>BadMeeting</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.varnakov.badmeeting</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon.icns</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Bad Meeting</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.2.20</string>
+	<key>CFBundleVersion</key>
+	<string>24</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.2</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Приложение записывает речь с микрофона во время встречи.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Приложение записывает звук Zoom или Telemost во время встречи.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Приложение читает выбранные календари для списка встреч и напоминаний.</string>
+</dict>
+</plist>

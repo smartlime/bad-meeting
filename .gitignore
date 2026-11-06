@@ -1,0 +1,9 @@
+.local/
+.diagnostics/
+.DS_Store
+*.log
+__pycache__/
+desktop/macos/.build/
+desktop/macos/.cache/
+desktop/macos/dist/
+/ChatGPT Image*.png
